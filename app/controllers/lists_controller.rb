@@ -13,6 +13,8 @@ class ListsController < ApplicationController
     @bookmark = Bookmark.new
   end
 
+  # 이 부분 이해안된다.북마킄 뉴를 왜 만들지
+
   def create
     @list = List.create(list_params)
     if @list.save
@@ -30,10 +32,11 @@ class ListsController < ApplicationController
   private
 
   def list_params
-    params.require(:list).permit(:name, :photo)
+    params.require(:list).permit(:name)
   end
 
   def find_list
     @list = List.find(params[:id])
   end
+
 end

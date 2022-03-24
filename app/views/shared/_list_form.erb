@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row content-border">
+    <div class="col-lg-6 col-md-10">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name, :label => "Add List", placeholder: "classic, horror.....", class: "list-input"%>
+        <%= f.submit "Save list", class: "btn btn-flat" %>
+        <%= link_to  "main page", lists_path, class: "btn btn-flat"%>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 class ListsController < ApplicationController
-  before_action :find_list, only: [:show, :destroy]
+  before_action :find_list, only: [:show, :destroy, :edit, :update]
 
   def index
     @lists = List.all
@@ -11,6 +11,18 @@ class ListsController < ApplicationController
 
   def show
     @bookmark = Bookmark.new
+  end
+
+  def edit
+  end
+
+  def update
+    @list.update(list_params)
+    if @list.save
+      redirect_to list_path
+    else
+      render :edit
+    end
   end
 
   # 이 부분 이해안된다.북마킄 뉴를 왜 만들지

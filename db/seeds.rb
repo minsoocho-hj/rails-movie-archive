@@ -30,3 +30,8 @@ url = "http://tmdb.lewagon.com/movie/popular"
   end
 end
 puts "Movies created"
+
+
+List.create(
+  name: "Classic"
+)

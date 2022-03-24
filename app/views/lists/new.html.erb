@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row content-border">
+    <div class="col-lg-6 col-md-10">
+      <%= simple_form_for @list do |f| %>
+        <%= f.input :name %>
+        <%= f.submit "Create a list", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

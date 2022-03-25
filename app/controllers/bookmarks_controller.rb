@@ -1,4 +1,5 @@
 class BookmarksController < ApplicationController
+  skip_before_action :authenticate_user!, only: :show
   before_action :find_bookmark, only: [:destroy, :show, :edit, :update]
   before_action :set_list, only: [:new, :create, :show]
 

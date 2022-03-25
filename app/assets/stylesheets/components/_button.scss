@@ -20,12 +20,15 @@
   font-weight: 600;
 }
 
-.btn-add-bookmark:hover,
-.btn-list-edit:hover,
-.btn-list-edit:hover {
-  opacity: 0.7;
+.btn-add-bookmark,
+.btn-list-delete,
+.btn-list-edit {
+  color: #1bcb7f;
 }
 
-.btn-bookmark-delete {
-  background: transparent;
+.btn-add-bookmark:hover,
+.btn-list-delete:hover,
+.btn-list-edit:hover {
+  color: #1bcb7f;
+  opacity: 0.7;
 }

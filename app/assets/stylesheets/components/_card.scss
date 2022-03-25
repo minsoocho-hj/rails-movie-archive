@@ -43,10 +43,13 @@
 }
 
 .btn-bookmark-delete {
-  font-size: 0.8em;
-  text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0.5rem;
-  left: 0.5rem;
-  background: transparent;
+  right: 0.5rem;
+  font-size: 0.8em;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-bookmark-edit {
+  font-size: 0.8em;
 }

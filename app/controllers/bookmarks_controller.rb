@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
-  before_action :find_bookmark, only: [:destroy, :show]
-  before_action :set_list, only: [:new, :create, :edit, :show]
+  before_action :find_bookmark, only: [:destroy, :show, :edit, :update]
+  before_action :set_list, only: [:new, :create, :show]
 
   def new
     @bookmark= Bookmark.new

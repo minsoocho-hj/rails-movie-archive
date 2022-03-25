@@ -10,7 +10,7 @@
       <%= link_to "Add Bookmark", new_list_bookmark_path(@list), class:"btn-add-bookmark" %>
       <div class="btn-list">
         <%= link_to "Edit", edit_list_path, class: "btn-list-edit " %>
-        <%= link_to "Delete", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }%>
+        <%= link_to "Delete", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-list-delete "%>
       </div>
     </div>
   </div>
@@ -25,10 +25,10 @@
             <%= image_tag movie.poster_url, alt: movie.title %>
             <div class="card-trip-infos">
             <div>
-              <h2><%= movie.title %></h2>
-              <p><%= movie.overview.first(150) %>...</p>
+              <h2 class="mb-1"><%= movie.title %></h2>
+              <p><%= movie.overview.first(150)%>...</p>
               <hr>
-              <h2>My comments</h2>
+              <h2 class="mb-1">My comments <%= link_to "🖊", edit_list_bookmark_path(bookmark), class: "btn-bookmark-edit"%></h2>
               <p><%= bookmark.comment %></p>
             </div>
 

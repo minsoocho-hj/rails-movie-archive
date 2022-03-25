@@ -2,7 +2,7 @@
   <div class="row content-border">
     <div class="col-lg-6 col-md-10">
       <%= simple_form_for [@list, @bookmark] do |f| %>
-        <%= f.association :movie, :label => "Select Movie 🎬", input_html: { class: 'select2' } %>
+        <%= f.association :movie, :label => "Select Movie 🎬",  class: 'select2' %>
         <%= f.input :comment, :label => "Add comment 💬", placeholder: "I love this movie!"%>
         <%= f.submit "Save bookmark", class: "btn btn-flat" %>
         <%= link_to  "Cancel", list_path(@list), class: "btn btn-flat"%>

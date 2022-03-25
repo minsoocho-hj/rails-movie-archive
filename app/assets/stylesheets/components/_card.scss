@@ -3,12 +3,15 @@
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  height: 350px;
+  height: 400px;
   overflow: scroll;
+  margin-bottom: 2rem;
+  position: relative;
 }
 
 .card-trip > img {
   height: 200px;
+  width: 100%;
   object-fit: cover;
 }
 
@@ -37,4 +40,13 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.btn-bookmark-delete {
+  font-size: 0.8em;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  background: transparent;
 }

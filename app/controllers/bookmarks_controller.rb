@@ -1,6 +1,6 @@
 class BookmarksController < ApplicationController
-  before_action :find_bookmark, only: :destroy
-  before_action :set_list, only: [:new, :create]
+  before_action :find_bookmark, only: [:destroy, :show]
+  before_action :set_list, only: [:new, :create, :edit, :show]
 
   def new
     @bookmark= Bookmark.new
@@ -14,6 +14,15 @@ class BookmarksController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   def destroy

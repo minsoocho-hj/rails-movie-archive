@@ -8,11 +8,13 @@ import Turbolinks from "turbolinks";
 import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import { loadDynamicBannerText } from "../components/banner";
+import { initSelect2 } from "../components/init_select2";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your JS functions here
   // [...]
   loadDynamicBannerText();
+  initSelect2();
 });
 
 Rails.start();

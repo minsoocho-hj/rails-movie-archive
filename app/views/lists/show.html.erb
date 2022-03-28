@@ -1,4 +1,4 @@
-<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url(https://images.squarespace-cdn.com/content/v1/5497331ae4b0148a6141bd47/1594500041049-90AK78L2HBXEL4T08WRM/7bdbc75725194a9a44d66846fc37962e.jpg?format=1500w);">
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, :cloud_name => "djfyvcyg6") : image_path('logo.JPG') %>')">
   <div class="container show-list">
     <h1 class="mb-3"><%= @list.name %></h1>
   </div>

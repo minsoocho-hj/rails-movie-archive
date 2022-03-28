@@ -17,6 +17,9 @@
   <hr>
   <div class="row">
 
+    <% if @list.movies.length == 0  %>
+        <span class="no-list-message mt-3">Save your favorite movies 🎬</span>
+    <% end %>
     <% @list.movies.each do |movie| %>
       <div class="col-sm-12 col-md-4 mb-3">
         <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>

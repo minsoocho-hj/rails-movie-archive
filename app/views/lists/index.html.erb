@@ -1,15 +1,16 @@
 <%= render 'shared/banner' %>
 
 <div class="container">
-  <div class="row">
-    <% if @lists.length == 0  %>
-      <div>No List yet!</div>
-    <% end %>
 
-    <% @lists.each do |list|%>
-    <div class="card-category col-md-4 col-sm-12 m-3 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key, :cloud_name => "djfyvcyg6") : image_path('records.JPG') %>')">
-      <%= link_to list.name, list_path(list)%>
-    </div>
+    <% if @lists.length == 0  %>
+        <span class="no-list-message mt-3">Make your own list 📝</span>
     <% end %>
-  </div>
+    <div class="cards mt-3">
+    <% @lists.each do |list|%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key, :cloud_name => "djfyvcyg6") : image_path('records.JPG') %>')">
+        <%= link_to list.name, list_path(list) %>
+      </div>
+    <% end %>
+    </div>
+
 </div>

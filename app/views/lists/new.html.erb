@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row content-border">
     <div class="col-lg-6 col-md-10">
-      <%= simple_form_for @list do |f| %>
+      <%= simple_form_for(@list) do |f| %>
         <%= f.input :photo, as: :file %>
         <%= f.input :name, :label => "Add List", placeholder: "classic, horror.....", class: "list-input"%>
 

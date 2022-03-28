@@ -1,7 +1,7 @@
 class BookmarksController < ApplicationController
   skip_before_action :authenticate_user!, only: :show
   before_action :set_list, only: [:new, :create, :show]
-  before_action :find_bookmark, only: [:destroy, :show, :update]
+  before_action :find_bookmark, only: [:destroy, :show]
 
   def new
     @bookmark= Bookmark.new
@@ -20,10 +20,6 @@ class BookmarksController < ApplicationController
   def show
   end
 
-
-
-  def update
-  end
 
   def destroy
     @bookmark.destroy

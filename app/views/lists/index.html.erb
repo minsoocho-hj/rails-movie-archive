@@ -7,8 +7,8 @@
     <% end %>
 
     <% @lists.each do |list|%>
-    <div class="col-md-4 col-sm-12 mb-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key, :cloud_name => "djfyvcyg6") : image_path('logo.JPG') %>')">
-      <%= link_to list.name, list_path(list), class: "card-category"  %>
+    <div class="card-category col-md-4 col-sm-12 m-3 " style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key, :cloud_name => "djfyvcyg6") : image_path('records.JPG') %>')">
+      <%= link_to list.name, list_path(list)%>
     </div>
     <% end %>
   </div>

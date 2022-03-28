@@ -6,13 +6,13 @@
 
 👉🏼 DEMO : https://rails-movie-archive.herokuapp.com/
 
-README 🔍
+## README 🔍
 - User can create/delete any kinds of movie list they wish, plus custom image background
 - User can choose up-to-date movie from the selection (movie API)
 - User can make bookmarks in each movie list, with short comment.
 
 
-##Tech stacks 💪
+## Tech stacks 💪
 - Ruby and ruby on Rails
 - Javascript
 - movie API
@@ -24,7 +24,7 @@ README 🔍
 - html, css, Bootstrap
 
 
-##Future improvement plan 📝
+## Future improvement plan 📝
 - Add rating feaure for each movie bookmarks
 - concise devise setup(all the logged in user can add/edit/delete saved list and movies at this moment)
 - Make fancier alrert prompt

@@ -2,6 +2,7 @@
     <div class="container">
       <%= link_to lists_path, class: "navbar-brand" do %>
       <div class="logo">Movie archive</div>
+
       <% end %>
 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,13 +12,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
+          <span class="p-2">Hello <%= current_user.name.capitalize()  %>!</span>
           <li class="nav-item">
             <%= link_to "All list", lists_path, class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "New list", new_list_path, class: "nav-link" %>
           </li>
-            <span class="p-2">Hello <%= current_user.name %>!</span>
           <li class="nav-item">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>

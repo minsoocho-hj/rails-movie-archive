@@ -1,4 +1,4 @@
-<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, :cloud_name => "djfyvcyg6") : image_path('logo.JPG') %>')">
+<div class="banner mb-3" style="background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.4)), url('<%= @list.photo.attached? ? cl_image_path(@list.photo.key, :cloud_name => "djfyvcyg6") : image_path('records.JPG') %>')">
   <div class="container show-list">
     <h1 class="mb-3"><%= @list.name %></h1>
   </div>
@@ -24,7 +24,7 @@
       <div class="col-sm-12 col-md-4 mb-3">
         <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
           <div class="card-trip">
-            <%= link_to "❌", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-bookmark-delete"%>
+              <%= link_to "❌", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn-bookmark-delete" %>
             <%= image_tag movie.poster_url, alt: movie.title %>
             <div class="card-trip-infos">
             <div>
@@ -33,6 +33,7 @@
               <hr>
               <h2 class="mb-1">My comments <%= link_to "🖊", edit_list_bookmark_path(bookmark), class: "btn-bookmark-edit"%></h2>
               <p><%= bookmark.comment %></p>
+
             </div>
 
           </div>

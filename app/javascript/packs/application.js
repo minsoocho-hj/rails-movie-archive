@@ -9,10 +9,25 @@ import * as ActiveStorage from "@rails/activestorage";
 import "channels";
 import { loadDynamicBannerText } from "../components/banner";
 import { initSelect2 } from "../components/init_select2";
+import { initSweetalert } from "../plugins/init_sweetalert";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your JS functions here
   // [...]
+  initSweetalert(
+    "#sweet-alert-demo",
+    {
+      title: "Are you sure?",
+      text: "This action cannot be reversed",
+      icon: "warning",
+    },
+    (value) => {
+      if (value) {
+        const link = document.querySelector("#delete-link");
+        link.click();
+      }
+    }
+  );
   loadDynamicBannerText();
   initSelect2();
 });
